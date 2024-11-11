@@ -27,7 +27,7 @@ const About = () => {
 
         <div className="row mt-24 text-left lg:flex-nowrap">
           <div className="lg:col-6">
-            <div className="rounded border border-border p-6 dark:border-darkmode-border">
+            <div className="">
               <h2 className="section-title mb-12">{education.title}</h2>
               <div className="row">
                 {education.degrees.map((degree, index) => (
@@ -43,7 +43,7 @@ const About = () => {
           </div>
 
           <div className="experience mt-10 lg:mt-0 lg:col-6">
-            <div className="rounded border border-border p-6 dark:border-darkmode-border">
+            <div className="">
               <h2 className="section-title mb-12">{experience.title}</h2>
               <ul className="row">
                 {experience.list.map((item, index) => (

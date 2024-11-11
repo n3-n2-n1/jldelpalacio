@@ -1,8 +1,8 @@
 ---
 banner:
-  title: Palacios **!**
-  title_small: "Jose Luis"
-  content: Are Developer and recently started your own business Already made website to ensure presence wants to develop.
+  title: ""
+  title_small: "Jose Luis del Palacio"
+  content: Co-fundador de Decrypto.la, una empresa dedicada a soluciones financieras para el mercado cripto y PYMEs en Argentina.
   image_enable: true
   image: /images/banner-author.png
   button:

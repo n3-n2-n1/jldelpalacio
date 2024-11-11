@@ -7,27 +7,8 @@
     {
       "name": "Contact",
       "url": "/contact"
-    },
-    {
-      "name": "Pages",
-      "url": "",
-      "hasChildren": true,
-      "children": [
-        {
-          "name": "Categories",
-          "url": "/categories"
-        }
-      ]
     }
   ],
   "footer": [
-    {
-      "name": "Home",
-      "url": "/"
-    },
-    {
-      "name": "Contact",
-      "url": "/contact"
-    }
   ]
 }

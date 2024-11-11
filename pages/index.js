@@ -10,8 +10,11 @@ import dateFormat from "@lib/utils/dateFormat";
 import { sortByDate } from "@lib/utils/sortFunctions";
 import { markdownify } from "@lib/utils/textConverter";
 import Link from "next/link";
-import About from "@layouts/About"
+import About from "@layouts/About";
 import { FaRegCalendar } from "react-icons/fa";
+
+import { BsArrowRightShort } from "react-icons/bs";
+import { FaEnvelope, FaMapMarkerAlt, FaUserAlt } from "react-icons/fa";
 const { blog_folder, pagination } = config.settings;
 
 const Home = ({
@@ -33,60 +36,55 @@ const Home = ({
     <Base>
       {/* Banner */}
       <section className="section banner relative pb-0">
-       {/* <ImageFallback
+        {/* <ImageFallback
           className="absolute bottom-0 left-0 z-[-1] w-full"
           src={"/images/banner-bg-shape.svg"}
           width={1905}
           height={295}
           alt="banner-shape"
           priority
-        />
-        */}
+        /> */}
 
         <div className="container">
           <div className="row flex-wrap-reverse items-center justify-center lg:flex-row">
-            <div className={banner.image_enable ? "mt-12 text-center lg:mt-0 lg:text-left lg:col-6" : "mt-12 text-center lg:mt-0 lg:text-left lg:col-12"}>
+            <div
+              className={
+                banner.image_enable
+                  ? "mt-12 text-center lg:col-6 lg:mt-0 lg:text-left"
+                  : "mt-12 text-center lg:col-12 lg:mt-0 lg:text-left"
+              }
+            >
               <div className="banner-title">
                 {markdownify(banner.title, "h1")}
                 {markdownify(banner.title_small, "span")}
               </div>
               {markdownify(banner.content, "p", "mt-4")}
-              {banner.button.enable && (
-                  <Link
-                    className="btn btn-primary mt-6"
-                    href={banner.button.link}
-                    rel={banner.button.rel}
-                  >
-                    {banner.button.label}
-                  </Link>
-              )}
             </div>
             {banner.image_enable && (
-                <div className="col-9 lg:col-6">
-              {/*                
-              <ImageFallback
-                    className="mx-auto object-contain"
-                    src={banner.image}
-                    width={548}
-                    height={443}
-                    priority={true}
-                    alt="Banner Image"
-                  /> */}
-                </div>
+              <div className="col-9 lg:col-6">
+                <ImageFallback
+                  className="mx-auto object-contain"
+                  src={banner.image}
+                  width={548}
+                  height={443}
+                  priority={true}
+                  alt="Banner Image"
+                />
+              </div>
             )}
           </div>
         </div>
       </section>
 
       <section>
-        <About/>
+        <About />
       </section>
 
       {/* Home main */}
       <section className="section">
         <div className="container">
           <div className="row items-start">
-            <div className="mb-12 lg:mb-0 lg:col-8">
+            <div className="mb-12 lg:col-8 lg:mb-0">
               {/* Featured posts */}
               {featured_posts.enable && (
                 <div className="section">
@@ -96,7 +94,7 @@ const Home = ({
                       <div className="md:col-6">
                         <Post post={featuredPosts[0]} />
                       </div>
-                      <div className="scrollbar-w-[10px] mt-8 max-h-[480px] scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-border dark:scrollbar-track-gray-800 dark:scrollbar-thumb-darkmode-theme-dark md:mt-0 md:col-6">
+                      <div className="scrollbar-w-[10px] mt-8 max-h-[480px] scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-border md:col-6 dark:scrollbar-track-gray-800 dark:scrollbar-thumb-darkmode-theme-dark md:mt-0">
                         {featuredPosts
                           .slice(1, featuredPosts.length)
                           .map((post, i, arr) => (
@@ -180,6 +178,108 @@ const Home = ({
             />
           </div>
         </div>
+        {/* COntact */}
+        <section className="section lg:mt-16">
+          <div className="container">
+            <div className="row relative pb-16">
+              <ImageFallback
+                className="-z-[1] object-cover object-top"
+                src={"/images/map.svg"}
+                fill="true"
+                alt="map bg"
+                priority={true}
+              />
+
+              <div className="contact-form-wrapper rounded border border-border p-6 lg:col-6 dark:border-darkmode-border">
+                <h2>
+                  Send Us A
+                  <span className="ml-1.5 inline-flex items-center text-primary">
+                    Message
+                    <BsArrowRightShort />
+                  </span>
+                </h2>
+                <form
+                  className="contact-form mt-12"
+                  method="POST"
+                  action={() => {}}
+                >
+                  <div className="mb-6">
+                    <label className="mb-2 block font-secondary" htmlFor="name">
+                      Full name
+                      <small className="font-secondary text-sm text-primary">
+                        *
+                      </small>
+                    </label>
+                    <input
+                      className="form-input w-full"
+                      name="name"
+                      type="text"
+                      placeholder="Thomas Milano"
+                      required
+                    />
+                  </div>
+                  <div className="mb-6">
+                    <label
+                      className="mb-2 block font-secondary"
+                      htmlFor="email"
+                    >
+                      Email Address
+                      <small className="font-secondary text-sm text-primary">
+                        *
+                      </small>
+                    </label>
+                    <input
+                      className="form-input w-full"
+                      name="email"
+                      type="email"
+                      placeholder="example@gmail.com"
+                      required
+                    />
+                  </div>
+                  <div className="mb-6">
+                    <label
+                      className="mb-2 block font-secondary"
+                      htmlFor="subject"
+                    >
+                      Subject
+                      <small className="font-secondary text-sm text-primary">
+                        *
+                      </small>
+                    </label>
+                    <input
+                      className="form-input w-full"
+                      name="subject"
+                      type="text"
+                      placeholder="Blog advertisement"
+                      required
+                    />
+                  </div>
+                  <div className="mb-6">
+                    <label
+                      className="mb-2 block font-secondary"
+                      htmlFor="message"
+                    >
+                      Your Message Here
+                      <small className="font-secondary text-sm text-primary">
+                        *
+                      </small>
+                    </label>
+                    <textarea
+                      className="form-textarea w-full"
+                      placeholder="Hello I’m Mr ‘x’ from………….."
+                      rows="7"
+                    />
+                  </div>
+                  <input
+                    className="btn btn-primary"
+                    type="submit"
+                    value="Send Now"
+                  />
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
       </section>
     </Base>
   );

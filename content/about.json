@@ -1,41 +1,51 @@
 {
-    "title": "About The Author",
-    "image": "/images/author.png",
-    "description": "meta description",
-    "layout": "about",
-    "education": {
-      "title": "Formal Education",
-      "degrees": [
-        {
-          "university": "Southeast University",
-          "content": "1985 • 1991 • gravida nibh velvelit auctor alimo quet menean solli"
-        },
-        {
-          "university": "Northeast University",
-          "content": "1985 • 1991 • gravida nibh velvelit auctor alimo quet menean solli"
-        },
-        {
-          "university": "Easteast University",
-          "content": "1985 • 1991 • gravida nibh velvelit auctor alimo quet menean solli"
-        },
-        {
-          "university": "Southeast University",
-          "content": "1985 • 1991 • gravida nibh velvelit auctor alimo quet menean solli"
-        }
-      ]
+  "title": "About",
+  "image": "/images/jose-luis-del-palacio.png",
+  "description": "José Luis del Palacio - Inversor y empresario experto en criptomonedas, finanzas, y análisis técnico. Co-fundador de Decrypto.la, una empresa dedicada a soluciones financieras para el mercado cripto y PYMEs en Argentina.",
+  "layout": "about",
+  "education": {
+    "title": "Formal Education",
+    "degrees": [
+      {
+        "university": "Universidad de Buenos Aires",
+        "content": "2001 • 2006 • Licenciatura en Economía con especialización en mercados financieros."
+      },
+      {
+        "university": "Universidad del CEMA",
+        "content": "2007 • 2008 • Maestría en Finanzas, con enfoque en economía aplicada y derivados financieros."
+      }
+    ]
+  },
+  "experience": {
+    "title": "Experiencia",
+    "list": [
+      "Co-fundador de Decrypto.la",
+      "Analista de Mercado y asesor financiero en criptomonedas",
+      "Autor de artículos financieros enfocados en economía argentina y estrategias de inversión",
+      "Conferencista en eventos de finanzas y tecnología blockchain",
+      "Consultor para PYMEs sobre mitigación de riesgo cambiario en economías volátiles",
+      "Consultor para PYMEs sobre mitigación de riesgo cambiario en economías volátiles"
+    ]
+  },
+  "content": "José Luis del Palaciol, inversor y empresario con amplia experiencia en criptomonedas, finanzas, y análisis técnico. Como co-fundador de Decrypto.la, se dedica a desarrollar herramientas financieras innovadoras.",
+  "recent_articles": [
+    {
+      "title": "Qué desafíos financieros tienen las pymes para seguir operando",
+      "date": "2023-06-31T13:02:00Z",
+      "image": "/images/post/post-1.png",
+      "categories": ["finanzas", "criptomonedas"],
+      "featured": true,
+      "draft": false,
+      "content": "> Los resultados de las elecciones PASO generaron un fuerte impacto en la economía argentina, que afectó a varios sectores, entre ellos a las pequeñas y medianas empresas, produciendo caída en ventas, remarcación de precios y falta de stock. [...]"
     },
-    "experience": {
-      "title": "Work Experience",
-      "list": [
-        "Best Writer Award",
-        "Best New Novel",
-        "Best Book",
-        "Best Article",
-        "Best New Novel",
-        "Best Book",
-        "Best Article"
-      ]
-    },
-    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi amet, ultrices scelerisque cras..."
-  }
-  
+    {
+      "title": "La importancia de las herramientas de cobertura para PYMEs en economías volátiles",
+      "date": "2023-09-12T10:00:00Z",
+      "image": "/images/post/post-2.png",
+      "categories": ["finanzas", "estrategia"],
+      "featured": false,
+      "draft": false,
+      "content": "> En contextos económicos de alta volatilidad, como el de Argentina, contar con mecanismos de cobertura financiera se vuelve indispensable para que las empresas puedan manejar los riesgos y garantizar su continuidad a largo plazo. [...]"
+    }
+  ]
+}
