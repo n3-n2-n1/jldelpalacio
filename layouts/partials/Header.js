@@ -31,10 +31,8 @@ const Header = () => {
 
   return (
     <header className="header">
-      <nav className="navbar container px-1 sm:px-8">
-        <div className="order-0">
-          <Logo />
-        </div>
+      <nav className="navbar container px-1 sm:px-4">
+          <Logo className="w-auto h-auto" />
         <div className="flex items-center space-x-4 xl:space-x-8">
           <div
             className={`collapse-menu ${
@@ -110,21 +108,13 @@ const Header = () => {
               ))}
             </ul>
             {/* header social */}
-            <Social source={socical} className="socials" />
           </div>
           <ThemeSwitcher />
           {/* Header search */}
-          <div
-            className="search-icon"
-            onClick={() => {
-              setSearchModal(true);
-            }}
-          >
-            <IoSearch />
-          </div>
+
           <button
             onClick={() => setShowMenu(!showMenu)}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary text-white lg:hidden"
+            className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white lg:hidden"
           >
             {showMenu ? (
               <svg className="h-4 w-4 fill-current" viewBox="0 0 20 20">
@@ -143,10 +133,6 @@ const Header = () => {
           </button>
         </div>
 
-        <SearchModal
-          searchModal={searchModal}
-          setSearchModal={setSearchModal}
-        />
       </nav>
       {showMenu && (
         <div className="header-backdrop absolute top-0 left-0 h-[100vh] w-full bg-black/50 lg:hidden"></div>

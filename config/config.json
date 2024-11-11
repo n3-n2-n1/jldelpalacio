@@ -1,12 +1,12 @@
 {
   "site": {
-    "title": "Jose Luis Palacios",
+    "title": "Jose Luis Del Palacio",
     "base_url": "/",
     "favicon": "/images/favicon.png",
     "logo": "/images/logo.png",
     "logo_white": "/images/logo-light.png",
-    "logo_width": "150",
-    "logo_height": "39",
+    "logo_width": "170",
+    "logo_height": "20",
     "logo_text": "Jose Luis Del Palacio"
   },
   "settings": {
@@ -47,7 +47,7 @@
     "newsletter": {
       "enable": true,
       "title": "Newsletter",
-      "content": "Join thousands of Tiny Salt subscribers and get our best recipes delivered each week!",
+      "content": "Contacto",
       "privacy_policy_page": "#",
       "malichipm_url": ""
     }

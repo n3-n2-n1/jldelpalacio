@@ -10,6 +10,7 @@ import dateFormat from "@lib/utils/dateFormat";
 import { sortByDate } from "@lib/utils/sortFunctions";
 import { markdownify } from "@lib/utils/textConverter";
 import Link from "next/link";
+import About from "@layouts/About"
 import { FaRegCalendar } from "react-icons/fa";
 const { blog_folder, pagination } = config.settings;
 
@@ -75,6 +76,10 @@ const Home = ({
             )}
           </div>
         </div>
+      </section>
+
+      <section>
+        <About/>
       </section>
 
       {/* Home main */}
